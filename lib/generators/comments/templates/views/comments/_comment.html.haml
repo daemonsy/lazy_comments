@@ -1,0 +1,13 @@
+.comment.row
+  .avatar.col-md-1
+    = image_tag comment.user.avatar_url
+  .message.col-md-9
+    %h4= comment.user.name
+    .row
+      .col-md-12
+        = comment.message
+  .timestamp.muted.col-md-2
+    .time{"data-js-pretty-date" => comment.created_at.iso8601, title: comment.created_at.to_s(:rfc822)}
+      = comment.created_at.iso8601
+    - if comment.user == current_user
+      .pull_right= link_to "Delete", comment_path(comment), class: "js_delete_comment"

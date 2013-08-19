@@ -1,0 +1,7 @@
+%section#comments.clearfix
+  %h3 Comments
+  .js_comments_wall
+    = render partial: "comments/comment", collection: comments, as: :comment
+  .row
+    .col-md-11
+      = render partial: "comments/form", locals: { comment: subject.comments.build }
