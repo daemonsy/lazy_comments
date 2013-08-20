@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-class CommentGenerator < Rails::Generators::Base
+class CommentsGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   def self.source_root
@@ -18,5 +18,9 @@ class CommentGenerator < Rails::Generators::Base
   def add_model
     copy_file "models/comment.rb", "app/models/comment.rb"
     migration_template "comments_table.rb", "db/migrate/create_comments.rb"
+  end
+
+  def add_views_and_assets
+    directory "views/comments", "app/views/comments"
   end
 end
