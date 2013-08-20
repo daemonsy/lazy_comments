@@ -8,13 +8,12 @@ Simple commenting gem that gives you tag any AR model with `has_comments` and ad
 - ActiveRecord
 - Haml (currently, generated views use HAML only)
 
-### Installation
+## Installation
 
-`gem 'lazy_comments`
+    gem 'lazy_comments'
+    rails g comments # Generates controllers, models, views and migrations
 
-`rails g comments` 
-
-### Usage
+## Usage
 
     class Post < ActiveRecord::Base
       has_comments
