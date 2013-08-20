@@ -29,12 +29,15 @@ Find Comments:
     
     post = Post.find(13)
     Comment.for_subject(post)
+    post.comments.where(user: current_user)
     
 Comments belonging to a group: 
     
     # Essentially group is a string that can be anything
     Comment.in_group("hello_world")
     
-    
-    
+
+Helpers 
+
+Feature not committed yet, coming soon! 
   
