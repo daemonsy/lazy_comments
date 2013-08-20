@@ -10,4 +10,11 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.homepage      = 'http://github.com/daemonsy/lazy_comments'
   s.license       = 'MIT'
+
+  s.add_runtime_dependency 'rails', ['>= 4']
+
+  s.add_development_dependency 'rspec', "2.14.1"
+  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'guard'
+  s.add_development_dependency 'guard-rspec'
 end
