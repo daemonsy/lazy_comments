@@ -1,11 +1,11 @@
 class CreateComments < ActiveRecord::Migration
   def up
     create_table :comments do |t|
-      t.text       :message
+      t.text       :body
       t.references :user, index: true
       t.references :commentable, polymorphic: true
       t.string     :group
-      t.string     :mentions
+      t.string     :topic
 
       t.timestamps
     end

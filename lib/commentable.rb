@@ -12,6 +12,10 @@ module Lazy
         where(commentable_type: subject.class.base_class, commentable_id: subject.id)
       end
 
+      def for_topic(topic)
+        where(topic: topic)
+      end
+
       def in_group(group)
         group.present? ? where(group: group) : self
       end
