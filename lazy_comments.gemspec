@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'lazy_comments'
-  s.version       = '0.1.0'
+  s.version       = '0.1.1'
   s.date          = '2013-08-18'
   s.summary       = "A Rails commenting gem that handles mentions"
   s.description   = "Hello world version of a commenting gem"

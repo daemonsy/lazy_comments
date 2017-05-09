@@ -62,23 +62,6 @@ describe "Lazy Comment" do
           expect(comments.size).to eq 2
         end
       end
-
-      describe "#in_groups" do
-        before(:each) do
-          @dorian_gray = Post.create(title: "A picture of Dorian Gray", body: "The story goes...")
-          @dorian_gray.comments.create(body: "lovely story", group: "haters")
-          @dorian_gray.comments.create(body: "lovely story", group: :fans)
-        end
-
-        it "filters by group" do
-          haters_comments = @dorian_gray.comments.in_group(:haters)
-          expect(haters_comments.size).to eq 1
-
-          fan_comments = @dorian_gray.comments.in_group(:fans)
-          expect(fan_comments.size).to eq 1
-        end
-
-      end
     end
   end
 end
