@@ -1,6 +1,9 @@
 lazy_comments
 =============
 
+**Not that anyone will use this, but it's good to state so. This is not suitable for real use**
+
+
 Simple commenting gem that gives you tag any AR model with `has_comments` and adding comments to it. 
 
 ### Requirements
